@@ -111,7 +111,7 @@ describe('cleanUpPackage', () => {
 			expect(logger.getCombinedLog()).toEqual([
 				['call', 'removing optional dependencies'],
 				['call', 'npm install -q --no-package-lock --no-audit --production --no-optional --dry-run'],
-				['call', 'npm dedupe -q --no-package-lock --dry-run']
+				['call', 'npm dedupe -q --no-package-lock --production --no-optional --dry-run']
 			]);
 		})
 		.then(done, done.fail);
